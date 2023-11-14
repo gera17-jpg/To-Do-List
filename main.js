@@ -1,18 +1,21 @@
 
 const tasks = [];
-let tasksHTML = '';
+displayTasks();
 
-function updateTasks() {
-    tasksHTML = '';
+function displayTasks() {
+    let tasksHTML = '';
+
+    function updateTasks() {
+        document.querySelector('.js-todolist').innerHTML = tasksHTML;
+    }
+
     for (let i = 0; i < tasks.length; i++) {
         const toDo = tasks[i];
-        const html = `<p>${toDo}</p>`;
-        tasksHTML += html;
+        tasksHTML += `<p>${toDo}</p>`;
     }
-    console.log(tasksHTML);
-}
 
-document.querySelector('.js-todolist') 
+    updateTasks();
+}
 
 function addToDo() {
     const taskInput = document.querySelector('.input-value');
@@ -23,6 +26,6 @@ function addToDo() {
 
     taskInput.value = '';
 
-    updateTasks(); // Call the function to update the tasksHTML
+    displayTasks();
 }
 
