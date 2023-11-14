@@ -1,0 +1,37 @@
+.add-todo-button{
+    background-color: green;
+    text-align: center;
+    border: none;
+    padding: 10px;
+}
+.todo-input-grid,.js-tasks{
+    display:grid;
+    grid-template-columns: 300px 250px 250px 120px;
+    grid-template-rows: auto;
+    grid-template-areas: "task time date delete";
+    gap: 10px;
+    padding:10px 5px;
+    text-align: center;
+    margin-bottom: 12px;
+}
+.task{
+    grid-area: task;
+}
+.time{
+    grid-area: time;
+}
+.date{
+    grid-area: date;
+}
+.delete-todo-button{
+    grid-area: delete;
+    background-color: red;
+    border: none;
+    padding:10px ;
+    text-align: center;
+}
+.delete-todo-button,
+.add-todo-button,
+.js-time-input,.js-due-date-input:hover{
+    cursor: pointer;
+}
