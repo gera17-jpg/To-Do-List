@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>To Do List</title>
-    </head>
-    <body>
-        <p>To Do Lists</p>
-        <input placeholder='Tasks here...' class='input-value'>
-        <button onclick='addToDo()'>Add</button>
+  <head>
+    <title>Todo List</title>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <p>Todo List</p>
 
-        <div class='js-todolist'></div>
-        <script src='main.js'></script>
-    </body>
+    <div class="todo-input-grid">
+      <input placeholder="Taks here..." class= "js-name-input">
+      <input type = "time" class= "js-time-input">
+      <input type= "date" class= "js-due-date-input">
+      <button onclick="
+        addTodo();
+      " class="add-todo-button">Add</button>
+    </div>
+
+    <div class="js-todo-list todo-grid"></div>
+
+    <script src="main.js"></script>
+  </body>
 </html>
 
 
